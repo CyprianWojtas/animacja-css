@@ -1,0 +1,110 @@
+div
+{
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	position: relative;
+	top: 10px;
+	border: 5px solid;
+	border-radius: 100%;
+	box-sizing: border-box;
+	margin: auto;
+	transform-style: preserve-3d;
+}
+.obrot
+{
+	width: 500px;
+	height: 500px;
+	animation: obrotY 10s linear infinite;
+}
+.obrotX
+{
+	animation: obrotX 6.5s linear infinite;
+}
+.obrotY
+{
+	animation: obrotY 10s linear infinite;
+}
+
+@keyframes obrotX
+{
+	100%
+	{
+		transform: rotateX(360deg);
+	}
+}
+
+@keyframes obrotY
+{
+	100%
+	{
+		transform: rotateY(360deg);
+	}
+}
+
+
+.obrot:after,
+.obrot:before,
+.obrotY:after,
+.obrotY:before
+{
+	content: " ";
+	position: absolute;
+	top: calc(50% - 2.5px);
+	width: 12.5px;
+	height: 5px;
+	background: #000;
+}
+
+.obrot:before,
+.obrotY:before
+{
+	left: 0;
+}
+
+.obrot:after,
+.obrotY:after
+{
+	right: 0;
+}
+
+.obrotX:after,
+.obrotX:before
+{
+	content: " ";
+	position: absolute;
+	left: calc(50% - 2.5px);
+	height: 12.5px;
+	width: 5px;
+	background: #000;
+}
+
+.obrotX:before
+{
+	top: 0;
+}
+
+.obrotX:after
+{
+	bottom: 0;
+}
+
+.obrot > div
+{ animation-duration: 10s; }
+.obrot > div > div
+{ animation-duration: 9s; }
+.obrot > div > div > div
+{ animation-duration: 8s; }
+.obrot > div > div > div > div
+{ animation-duration: 7s; }
+.obrot > div > div > div > div > div
+{ animation-duration: 6s; }
+.obrot > div > div > div > div > div > div
+{ animation-duration: 5s; }
+.obrot > div > div > div > div > div > div > div
+{ animation-duration: 4s; }
+.obrot > div > div > div > div > div > div > div > div
+{ animation-duration: 3s; }
+.obrot > div > div > div > div > div > div > div > div > div
+{ animation-duration: 2s; }
+.obrot > div > div > div > div > div > div > div > div > div > div
+{ animation-duration: 1s; }
